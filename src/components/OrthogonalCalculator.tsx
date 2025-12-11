@@ -102,7 +102,11 @@ const OrthogonalCalculator = () => {
     'y = Cx^2',
     'xy = C',
     'y = Ce^x',
-    'y = Cx'
+    'y = Cx',
+    'y^2 = Cx',
+    'y = Cx^3',
+    'y = C ln(x)',
+    'y = C sin(x)'
   ];
 
   return (
@@ -223,15 +227,15 @@ const OrthogonalCalculator = () => {
                   }}
                   config={{
                     responsive: true,
-                    scrollZoom: true,
+                    scrollZoom: false,
                     displayModeBar: true,
-                    modeBarButtonsToRemove: ['lasso2d', 'select2d']
+                    modeBarButtonsToRemove: ['lasso2d', 'select2d', 'zoom2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
                   }}
                   style={{ width: '100%' }}
                 />
               </div>
               <p className="text-white/60 text-sm mt-3 text-center">
-                💡 Scroll to zoom • Drag to pan • Hover for coordinates
+                💡 Drag to pan • Hover for coordinates
               </p>
             </div>
 
@@ -276,7 +280,11 @@ const OrthogonalCalculator = () => {
                 { eq: 'y = Cx²', desc: 'Parabolas → Ellipses' },
                 { eq: 'xy = C', desc: 'Hyperbolas → Hyperbolas' },
                 { eq: 'y = Ce^x', desc: 'Exponentials → Parabolas' },
-                { eq: 'y = Cx', desc: 'Lines → Circles' }
+                { eq: 'y = Cx', desc: 'Lines → Circles' },
+                { eq: 'y² = Cx', desc: 'Horiz. Parabolas → Ellipses' },
+                { eq: 'y = Cx³', desc: 'Cubics → Ellipses' },
+                { eq: 'y = C·ln(x)', desc: 'Logarithmic → Ellipses' },
+                { eq: 'y = C·sin(x)', desc: 'Sine → Cosine-based' }
               ].map((item) => (
                 <div key={item.eq} className="bg-white/5 rounded-xl p-4 border border-white/10">
                   <p className="text-white font-mono text-lg">{item.eq}</p>

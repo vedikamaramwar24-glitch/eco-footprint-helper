@@ -1,7 +1,7 @@
-import OrthogonalCalculator from "@/components/OrthogonalCalculator";
+import CarbonCalculator from "@/components/CarbonCalculator";
 
 const Index = () => {
-  return <OrthogonalCalculator />;
+  return <CarbonCalculator />;
 };
 
 export default Index;
